@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+  flask-pipeline:
+    build: .
+    ports:
+      - '80:80'
+    container_name: flask-pipeline
