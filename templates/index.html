@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset=UTF-8>
-  <title>Flask Password Generator</title>
-  <style>
-    h1 {
-      color: #555;
-      border-bottom: 1px solid #555;
-    }
-
-    table, th, td {
-      border: 1px dotted #ccc;
-      border-collapse: collapse;
-      padding: 10px;
-      text-align: left;
-    }
-  </style>
+    <meta charset=UTF-8>
+    <title>Flask Password Generator</title>
+    <style>
+        h1 {
+            color: #555;
+            border-bottom: 1px solid #555;
+        }
+        table, th, td {
+            border: 1px dotted #ccc;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
 </head>
-
 <body>
-  <h1 align=center>Password Generator</h1>
-  <table style=width:100%>
-    <tr width=30% style=text-align:center>
-      <th>PASSWORD</th>
-      <th>BASE-64</th>
-      <th>MD5</th>
-    </tr>
-    <td>
-      {{ random_password }}
-    </td>
-    <td>
-      {{ base64_encoded_text }}
-    </td>
-    <td>
-      {{ md5_encoded_text }}
-    </td>
-  </body>
+    <h1 align=center>Password Generator</h1>
+    <table style=width:100%>
+        <tr>
+            {% for header in headings %}
+            <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+        <tr>
+            <td>{{ random_password }}</td>
+            <td>{{ base64_encoded_text }}</td>
+            <td>{{ md5_encoded_text }}</td>
+        </tr>
+    </table>
+</body>
 </html>
