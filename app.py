@@ -12,7 +12,7 @@ chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?01234
 def index():
     return """
             <h1>[Using]<h1>\n\t 
-            <h2> /ggenerate/length </h2>
+            <h2> /generate/length </h2>
             <h2> /generate/text </h2>\n\n
             <h1>[Example]<h1>\n\t 
             <h2> /generate/20 </h2> 
