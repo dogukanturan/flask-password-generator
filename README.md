@@ -32,9 +32,11 @@ To use Jenkinsfile, you need to install "Docker Pipeline" plugin on jenkins inst
 # Using
 ```
 localhost/generate/length
+localhost/generate/string
 ```
 
 #### Examples
 ```
 localhost/generate/12
+localhost/generate/hello
 ```
