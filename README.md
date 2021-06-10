@@ -7,12 +7,9 @@ A simple password generator built with Flask and built for testing DevOps proces
 - Jenkins
 
 # Install
-#### Flask
-```
-$ pip install -r requirements
-```
 #### Local
 ```
+$ pip install -r requirements
 $ python app.py
 ```
 #### Docker
