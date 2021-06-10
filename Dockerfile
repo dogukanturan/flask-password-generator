@@ -4,4 +4,3 @@ WORKDIR /app
 RUN pip install -r requirements.txt && \
     rm -rf /var/lib/apt/lists/*
 CMD ["python","app.py"]
-EXPOSE 80
