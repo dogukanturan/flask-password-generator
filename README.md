@@ -22,18 +22,28 @@ $ docker run -d -p 80:80 dturan/flask-password-generator
 
 To use Jenkinsfile, you need to install "Docker Pipeline" plugin on jenkins installed on your system.
 
-| Plugin | README |
-| ------ | ------ |
-| Docker Pipeline | https://plugins.jenkins.io/docker-workflow/
+| Plugin            | README |
+| ------            | ------ |
+| Docker Pipeline   | https://plugins.jenkins.io/docker-workflow/
 
-# Using
+# Using With Web Client
 ```
 localhost/generate/length
-localhost/generate/string
+localhost/generate/text
 ```
-
-#### Examples
+### Requests Examples
 ```
 localhost/generate/12
 localhost/generate/hello
+```
+#
+# Using With API
+```
+localhost/api/length
+localhost/api/text
+```
+### Requests Examples
+```
+curl -X POST localhost/generate/12
+curl -X POST localhost/generate/hello
 ```
