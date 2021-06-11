@@ -14,7 +14,7 @@ $ python app.py
 ```
 #### Docker
 ```
-$ docker run -d -p 80:80 dturan/flask-password-generator
+$ docker run -d -p 80:8080 dturan/flask-password-generator
 ```
 
 
