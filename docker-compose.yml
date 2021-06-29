@@ -1,7 +1,0 @@
-version: '3.8'
-services:
-  flask-password-generator:
-    build: .
-    ports:
-      - '80:8080'
-    container_name: flask-password-generator
