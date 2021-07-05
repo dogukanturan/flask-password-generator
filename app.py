@@ -11,13 +11,7 @@ letters = string.ascii_letters + string.digits + string.punctuation
 
 @app.route('/')
 def index():
-    return """
-            <h1>[Using]<h1>\n\t 
-            <h2> /generate/length </h2>
-            <h2> /generate/text </h2>\n\n
-            <h1>[Example]<h1>\n\t 
-            <h2> /generate/20 </h2> 
-            <h2> /generate/hello </h2>"""
+    return render_template('main.html')
 
 @app.route('/generate/<string:input>')
 def generate(input):
