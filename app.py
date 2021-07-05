@@ -1,12 +1,13 @@
 from flask import Flask, render_template, jsonify
 import random
+import string
 import base64
 import hashlib
 
 app = Flask(__name__)
 
 html_headings = ("PASSWORD", "BASE64", "MD5")
-chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*().,?0123456789'
+letters = string.ascii_letters + string.digits + string.punctuation
 
 @app.route('/')
 def index():
@@ -20,10 +21,9 @@ def index():
 
 @app.route('/generate/<string:input>')
 def generate(input):
-    password = ""
     if input.isnumeric():
         for i in range(int(input)):
-            password += random.choice(chars)
+            password = ''.join(random.choice(letters) for i in range(int(input)))
     else:
         password = input
     base64_encoded = base64.b64encode(password.encode("utf-8"))
@@ -32,10 +32,9 @@ def generate(input):
 
 @app.route('/api/<string:input>', methods=['POST'])
 def api(input):
-    password = ""
     if input.isnumeric():
         for i in range(int(input)):
-            password += random.choice(chars)
+            password = ''.join(random.choice(letters) for i in range(int(input)))
     else:
         password = input
     base64_encoded = base64.b64encode(password.encode("utf-8"))
